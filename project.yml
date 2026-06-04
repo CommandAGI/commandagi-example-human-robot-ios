@@ -1,0 +1,37 @@
+# XcodeGen spec — run `xcodegen generate` to produce PersonalDriver.xcodeproj, then open it.
+name: PersonalDriver
+options:
+  bundleIdPrefix: com.commandagi
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    MARKETING_VERSION: "0.1"
+    CURRENT_PROJECT_VERSION: "1"
+    # Optional: bake an API key at build time so the app auto-connects with no in-app setup.
+    #   xcodebuild ... COMMANDAGI_API_KEY=cagi_…   (or set it in the scheme). Never commit a real key.
+    COMMANDAGI_API_KEY: ""
+    COMMANDAGI_BASE_URL: "https://api.commandagi.com"
+targets:
+  PersonalDriver:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Personal Driver
+        UILaunchScreen: {}
+        NSCameraUsageDescription: The camera streams up as the robot's view so a CommandAGI agent (or a person) can drive you.
+        NSMicrophoneUsageDescription: Unused; the camera path is video-only.
+        COMMANDAGI_API_KEY: $(COMMANDAGI_API_KEY)
+        COMMANDAGI_BASE_URL: $(COMMANDAGI_BASE_URL)
+        CFBundleURLTypes:
+          - CFBundleURLName: com.commandagi.personaldriver.oauth
+            CFBundleURLSchemes: [commandagi-driver]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.commandagi.personaldriver
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        TARGETED_DEVICE_FAMILY: "1,2"
