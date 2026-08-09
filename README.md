@@ -1,6 +1,6 @@
 # Personal Driver — CommandAGI human-as-robot (iOS / SwiftUI)
 
-The iPhone counterpart to the [Android example](https://github.com/CommandAGI/commandagi-example-human-robot).
+The iPhone counterpart to the [Android example](https://github.com/commandAGI/commandagi-example-human-robot).
 This phone registers itself as a robot on [CommandAGI](https://commandagi.com): its **camera fills
 the screen and streams up** as the robot's observation, and the **move / turn directions a driver
 sends** — move forward / back / turn left / turn right / stop — appear **big at the bottom** for you
@@ -57,5 +57,5 @@ Never commit a real key — the default is empty and the app prompts you to conn
 - The YUV→JPEG path uses the simple `CIContext` conversion; tune `compressionQuality` / preset for
   your device.
 
-Built on the CommandAGI robot API. SDKs: [Python](https://github.com/CommandAGI/commandagi-python) ·
-[Node](https://github.com/CommandAGI/commandagi-node). MIT licensed.
+Built on the CommandAGI robot API. SDKs: [Python](https://github.com/commandAGI/commandagi-python) ·
+[Node](https://github.com/commandAGI/commandagi-node). MIT licensed.
