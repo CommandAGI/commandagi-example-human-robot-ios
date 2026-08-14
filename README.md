@@ -1,6 +1,6 @@
 # Personal Driver — CommandAGI human-as-robot (iOS / SwiftUI)
 
-The iPhone counterpart to the [Android example](https://github.com/CommandAGI/commandagi-example-human-robot).
+The iPhone counterpart to the [Android example](https://github.com/CommandAGI/commandagi-example-human-robot-android).
 This phone registers itself as a robot on [CommandAGI](https://commandagi.com): its **camera fills
 the screen and streams up** as the robot's observation, and the **move / turn directions a driver
 sends** — move forward / back / turn left / turn right / stop — appear **big at the bottom** for you
